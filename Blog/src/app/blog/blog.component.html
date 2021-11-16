@@ -1,0 +1,13 @@
+<select>Categorías</select>
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let post of arrPost">
+            <h4>{{post.titulo}}</h4>
+            <p>{{post.texto}}</p>
+            <p>{{post.autor}}</p>
+            <img [src]="post.imagen" />
+            <p>{{post.fecha}}</p>
+            <p>{{post.categoria}}</p>
+        </div>
+    </div>
+</div>

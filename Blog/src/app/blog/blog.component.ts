@@ -16,7 +16,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
     this.arrPost = this.postService.getAllPost()
-    console.log(this.arrPost)
+    // console.log(this.arrPost)
   }
 
 }

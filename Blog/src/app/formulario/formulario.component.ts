@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-formulario',
@@ -10,7 +11,7 @@ export class FormularioComponent implements OnInit {
 
   formulario: FormGroup;
 
-  constructor() {
+  constructor(private postService: PostService) {
     this.formulario = new FormGroup({
       titulo: new FormControl(),
       texto: new FormControl(),
@@ -23,6 +24,11 @@ export class FormularioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.postService.addPost(this.formulario.value);
+    this.formulario.reset()
   }
 
 }
