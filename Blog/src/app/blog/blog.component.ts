@@ -19,4 +19,9 @@ export class BlogComponent implements OnInit {
     // console.log(this.arrPost)
   }
 
+  onCategoriaChange($event: any) {
+    this.arrPost = this.postService.getPostByCategory($event.target.value)
+
+  }
+
 }

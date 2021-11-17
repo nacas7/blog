@@ -40,4 +40,9 @@ export class FormularioComponent implements OnInit {
     this.formulario.reset()
   }
 
+  selectCategory(categoria: string) {
+    this.postService.getPostByCategory(categoria)
+
+  }
+
 }
