@@ -5,12 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { FilterPipe } from './pipes/filter.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
-    FormularioComponent
+    FormularioComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

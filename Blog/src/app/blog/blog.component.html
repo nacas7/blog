@@ -1,12 +1,14 @@
+<input type="text" class="form-control" placeholder="Search..." name="filterPost" [(ngModel)]="filterPost">
 <select class="form-select" (change)="onCategoriaChange($event)">
     <option selected value=" ">Categorías</option>
-    <option value="series">Series</option>
-    <option value="peliculas">Películas</option>
-    <option value="libros">Libros</option>
+    <!--Preguntar a Mario sobre como cuando vuelva a canales aparezca todo-->
+    <option value="javaScript">JavaScript</option>
+    <option value="angular">Angular</option>
+    <option value="node">Nodejs</option>
 </select>
 <div class="container">
     <div class="row">
-        <div class="col-4" *ngFor="let post of arrPost">
+        <div class="col-4" *ngFor="let post of arrPost | filter: filterPost ">
             <h4>{{post.titulo}}</h4>
             <p>{{post.texto}}</p>
             <p>{{post.autor}}</p>

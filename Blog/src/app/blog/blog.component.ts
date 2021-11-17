@@ -14,6 +14,8 @@ export class BlogComponent implements OnInit {
     this.arrPost = [];
   }
 
+  filterPost = '';
+
   ngOnInit(): void {
     this.arrPost = this.postService.getAllPost()
     // console.log(this.arrPost)
