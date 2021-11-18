@@ -8,7 +8,7 @@
 </select>
 <div class="container">
     <div class="row">
-        <div class="col-4" *ngFor="let post of arrPost | filter: filterPost ">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let post of arrPost | filter: filterPost ">
             <h4>{{post.titulo}}</h4>
             <p>{{post.texto}}</p>
             <p>{{post.autor}}</p>
