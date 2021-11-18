@@ -15,18 +15,24 @@ export class FormularioComponent implements OnInit {
 
   constructor(private postService: PostService) {
     this.formulario = new FormGroup({
-      titulo: new FormControl('',
-        Validators.required),
-      texto: new FormControl('',
-        Validators.required),
-      autor: new FormControl('',
-        Validators.required),
-      imagen: new FormControl('',
-        Validators.required),
-      fecha: new FormControl('',
-        Validators.required),
-      categoria: new FormControl('',
-        Validators.required)
+      titulo: new FormControl('', [
+        Validators.required
+      ]),
+      texto: new FormControl('', [
+        Validators.required
+      ]),
+      autor: new FormControl('', [
+        Validators.required
+      ]),
+      imagen: new FormControl('', [
+        Validators.required
+      ]),
+      fecha: new FormControl('', [
+        Validators.required
+      ]),
+      categoria: new FormControl('', [
+        Validators.required
+      ])
 
     })
   }
@@ -43,5 +49,11 @@ export class FormularioComponent implements OnInit {
     this.postService.getPostByCategory(categoria)
 
   }
+
+  checkError(controlName: string, error: string) {
+    return this.formulario.get(controlName)?.hasError(error) && this.formulario.get(controlName)?.touched
+
+  }
+  //MIRAR LAS VALDACIONES 
 
 }
