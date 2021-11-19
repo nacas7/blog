@@ -15,6 +15,7 @@ export class FormularioComponent implements OnInit {
 
 
 
+
   constructor(private postService: PostService) {
     this.formulario = new FormGroup({
       titulo: new FormControl('', [
@@ -61,7 +62,7 @@ export class FormularioComponent implements OnInit {
   }
 
   selectCategory(categoria: string) {
-    this.postService.getPostByCategory(categoria)
+    return this.postService.getPostByCategory(categoria);
 
   }
 
@@ -69,6 +70,6 @@ export class FormularioComponent implements OnInit {
     return this.formulario.get(controlName)!.hasError(error) && this.formulario.get(controlName)!.touched;
   }
 
-  //MIRAR LAS VALDACIONES 
+
 
 }

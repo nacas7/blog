@@ -1,19 +1,23 @@
-<input type="text" class="form-control" placeholder="Search..." name="filterPost" [(ngModel)]="filterPost">
-<select class="form-select" (change)="onCategoriaChange($event)">
-    <option selected value=" ">Categorías</option>
-    <option value="FFVII">FFVII</option>
-    <option value="FFVIII">FFVIII</option>
-    <option value="FFX">FFX</option>
-</select>
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let post of arrPost | filter: filterPost ">
-            <h4>{{post.titulo}}</h4>
-            <p>{{post.texto}}</p>
-            <p>{{post.autor}}</p>
-            <img [src]="post.imagen" />
-            <p>{{post.fecha}}</p>
-            <p>{{post.categoria}}</p>
+<body>
+    <div class="btn">
+        <input type="text" class="form-control" placeholder="Search..." name="filterPost" [(ngModel)]="filterPost">
+        <select class="form-select" (change)="onCategoriaChange($event)">
+            <option value="">Categorías</option>
+            <option value="FFVII">FFVII</option>
+            <option value="FFVIII">FFVIII</option>
+            <option value="FFX">FFX</option>
+        </select>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let post of arrPost | filter: filterPost ">
+                <h4>{{post.titulo}}</h4>
+                <p>{{post.texto}}</p>
+                <p>{{post.autor}}</p>
+                <img [src]="post.imagen" />
+                <p>{{post.fecha}}</p>
+                <p>{{post.categoria}}</p>
+            </div>
         </div>
     </div>
-</div>
+</body>

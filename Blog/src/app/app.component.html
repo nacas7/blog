@@ -1,6 +1,10 @@
-<nav>
-    <button class="btn btn-dark" [routerLink]="['/blog']">Blog</button>
-    <button class="btn" [routerLink]="'/new'">Crear nuevo Post</button>
-</nav>
-
+<header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div>
+            <button class="btn btn-dark" [routerLink]="['/blog']">Blog</button>
+            <button class="btn btn-dark" [routerLink]="'/new'">Crear nuevo Post</button>
+        </div>
+    </nav>
+</header>
+<div class="hero"></div>
 <router-outlet></router-outlet>

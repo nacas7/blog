@@ -1,10 +1,27 @@
-
+body{
+    background-image: url(../../assets/images/final_fantasy.jpg);
+    background-position-x: center;
+    background-position-y: 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+img{
+    width: 100%;  
+}
 .container .row div{
     border-left: 1px solid black;
     border-bottom: 1px solid black;
     margin: 15px;
 }
+h3{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 10%
 
-img{
-    width: 100%;
 }

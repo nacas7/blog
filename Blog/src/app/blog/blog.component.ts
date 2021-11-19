@@ -10,19 +10,26 @@ import { PostService } from '../post.service';
 export class BlogComponent implements OnInit {
 
   arrPost: Post[];
+  arrCategoria: Post[];
+
   constructor(private postService: PostService) {
     this.arrPost = [];
+    this.arrCategoria = [];
   }
 
   filterPost = '';
 
   ngOnInit(): void {
     this.arrPost = this.postService.getAllPost()
+
+
+
     // console.log(this.arrPost)
   }
 
   onCategoriaChange($event: any) {
     this.arrPost = this.postService.getPostByCategory($event.target.value)
+
 
   }
 
