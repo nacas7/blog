@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+
 
 
 @NgModule({
@@ -13,13 +18,20 @@ import { FilterPipe } from './pipes/filter.pipe';
     AppComponent,
     BlogComponent,
     FormularioComponent,
-    FilterPipe
+    FilterPipe,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+
+
+
+
 
 
   ],

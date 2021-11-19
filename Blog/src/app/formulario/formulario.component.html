@@ -1,34 +1,64 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-    <div class="col-xs-12 col-sm-10 col-md-7">
-        <label class="form-label">Titulo</label>
-        <input type="text" class="form-control" formControlName="titulo">
-        <P class="error" *ngIf="checkError('required','titulo')">
-            El campo es requerido
-        </P>
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-7">
-        <label class="form-label">Texto</label>
-        <textarea type="text" class="form-control" formControlName="texto"></textarea>
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-7">
-        <label class="form-label">Autor</label>
-        <input type="text" class="form-control" formControlName="autor">
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-7">
-        <label class="form-label">Imagen</label>
-        <input type="text" class="form-control" formControlName="imagen">
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-7">
-        <label class="form-label">Fecha</label>
-        <input type="text" class="form-control" formControlName="fecha">
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-7">
-        <label class="form-label">Categorías</label>
-        <select class="form-select" formControlName="categoria">
-            <option value="FFVII">FFVII</option>
-            <option value="FFVIII">FFVIII</option>
-            <option value="FFX">FFX</option>
-        </select>
-    </div>
-    <input type="submit" value="Enviar" />
-</form>
+<div class="formulario">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="col-xs-12 col-sm-10 col-md-7">
+                <label class="form-label">Titulo</label>
+                <input type="text" class="form-control" formControlName="titulo">
+                <p class="error" *ngIf="checkError('titulo', 'required')">
+                    El campo título es requerido
+                </p>
+
+                <p class="error" *ngIf="checkError('titulo', 'minlength')">
+                    El campo debe tener mínimo 4 caracteres
+                </p>
+
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-7">
+                <label class="form-label">Texto</label>
+                <textarea type="text" rows="10" cols="30" class="form-control" formControlName="texto"></textarea>
+                <p class="error" *ngIf="checkError('texto', 'required')">
+                    El campo texto es requerido
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-7">
+                <label class="form-label">Autor</label>
+                <input type="text" class="form-control" formControlName="autor">
+                <p class="error" *ngIf="checkError('autor', 'required')">
+                    El campo autor es requerido
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-7">
+                <label class="form-label">Imagen</label>
+                <input type="text" class="form-control" formControlName="imagen" placeholder="URL de la imagen">
+                <p class="error" *ngIf="checkError('imagen', 'required')">
+                    La imagen es requerida
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-7">
+                <label class="form-label datapicker data-date-format='mm/dd/yyyy'">Fecha</label>
+                <input type="text" class="form-control" formControlName="fecha" placeholder="dd-mm-aaaa">
+                <p class="error" *ngIf="checkError('fecha', 'required')">
+                    La fecha es requerida
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-7">
+                <label class="form-label">Categorías</label>
+                <select class="form-select" formControlName="categoria">
+                    <option value="FFVII">FFVII</option>
+                    <option value="FFVIII">FFVIII</option>
+                    <option value="FFX">FFX</option>
+                </select>
+                <p class="error" *ngIf="checkError('categoria', 'required')">
+                    Seleccione una categoría
+                </p>
+            </div>
+            <input type="submit" value="Enviar" id="submit" />
+        </div>
+        <div>
+            <!-- <img src="https://64.media.tumblr.com/7bfd4decd367580206cab9e93ea688ad/tumblr_p8e998wBZE1sq41kno1_540.gifv">
+        <img src="" alt=""> -->
+            <!-- <img src="https://3.bp.blogspot.com/-lO5b8DmP8fY/WcJFsaLZ6AI/AAAAAAAAFec/KFljc-o2C90IKElCqSGe6uZqQayomvuhwCLcBGAs/s1600/trabia%2Bchocobo%2Bforest%2Bff8%2Bgif%2B1.gif"
+            alt=""> -->
+        </div>
+    </form>
+</div>

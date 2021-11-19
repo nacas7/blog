@@ -1,3 +1,37 @@
-.error{
-    color: red;
+
+label{
+    font-size: 15px;
+    font-weight: bold;
 }
+input.ng-valid.ng-touched{
+    border: 1px solid green;
+    
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+textarea.ng-valid.ng-touched{
+    border: 1px solid green;
+}
+textarea.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+.error{
+    color: white;
+    font-size: 15px;
+    background-color: rgb(207, 136, 136);
+    width: 30%; 
+    border-radius: 3%;
+}
+form{  
+     background-image: url(https://64.media.tumblr.com/7bfd4decd367580206cab9e93ea688ad/tumblr_p8e998wBZE1sq41kno1_540.gifv);
+     height: 100vh;
+     width: 100%;    
+     position: absolute;
+    
+}
+
+textarea{
+    border: 0;
+}
+
