@@ -10,23 +10,36 @@ export class PostService {
 
   constructor() {
     this.arr = [];
-  }
 
-  addPost(post: Post) {
-    this.arr.push(post)
   }
 
   getAllPost(): Post[] {
-    return this.arr
+    if (localStorage.getItem('post') === null) {
+      return this.arr;
+    } else {
+      this.arr = JSON.parse(localStorage.getItem('post')!)
+      return this.arr;
+    }
+
+  }
+
+  addPost(post: Post) {
+    let posts: Post[] = [];
+    if (localStorage.getItem('post') === null) {
+      posts.push(post);
+      localStorage.setItem('post', JSON.stringify(posts));
+    } else {
+      posts = JSON.parse(localStorage.getItem('post')!);
+      posts.push(post);
+      localStorage.setItem('post', JSON.stringify(posts));
+
+    }
+
   }
 
   getPostByCategory(cat: string): Post[] {
     return this.arr.filter(post => post.categoria === cat)
 
   }
-
-
-
-
 
 }
