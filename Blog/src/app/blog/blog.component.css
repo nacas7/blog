@@ -25,16 +25,14 @@ img{
     margin: 20px;
     /* background-color: lightgrey; */
     border: 1px solid black;
+    background-color: white;
     box-shadow:  4px 4px 4px lightskyblue;
    -webkit-box-shadow: 4px 4px 4px lightskyblue;
    -moz-box-shadow: 4px 4px 4px lightskyblue;
-
-
-   
-    
 }
 .container .row{
     margin-top: 10%;
+    
 }
 p{
    font-family: 'Source Sans Pro', sans-serif;
