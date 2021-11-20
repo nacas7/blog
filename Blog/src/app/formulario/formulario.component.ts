@@ -13,9 +13,6 @@ export class FormularioComponent implements OnInit {
 
   formulario: FormGroup;
 
-
-
-
   constructor(private postService: PostService) {
     this.formulario = new FormGroup({
       titulo: new FormControl('', [

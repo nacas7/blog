@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
 body{
     background-image: url(../../assets/images/final_fantasy.jpg);
     background-position-x: center;
@@ -5,6 +7,14 @@ body{
     background-size: 50%;
     background-repeat: no-repeat;
 }
+body div h1{
+    font-family: 'Bungee', cursive;
+    position: relative;
+    top: 73px;
+    text-align: center;
+    font-size: 40px;
+}
+
 img{
     width: 100%;  
 }
@@ -22,6 +32,13 @@ h3{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    top: 10%
-
+    top: 10%;
 }
+div.btn input{
+    margin-bottom: 5px;
+}
+.btn input, .btn select{
+     border-bottom: 4px solid black;
+}
+
+
