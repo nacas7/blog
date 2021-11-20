@@ -3,6 +3,8 @@
         <div>
             <button class="btn btn-dark" [routerLink]="['/blog']">Blog</button>
             <button class="btn btn-dark" [routerLink]="'/new'">Crear nuevo Post</button>
+            <p id="hora">{{ currentDate | date:'HH:mm.ss' }}</p>
+            <p id="dia">{{ currentDate | date:'dd-LL-yyyy' }}</p>
         </div>
     </nav>
 </header>

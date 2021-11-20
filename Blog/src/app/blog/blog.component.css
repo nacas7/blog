@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 body{
     background-image: url(../../assets/images/final_fantasy.jpg);
@@ -19,14 +20,32 @@ img{
     width: 100%;  
 }
 .container .row div{
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    margin: 15px;
+    /* border-left: 1px solid black;
+    border-bottom: 1px solid black; */
+    margin: 20px;
+    /* background-color: lightgrey; */
+    border: 1px solid black;
+    box-shadow:  4px 4px 4px lightskyblue;
+   -webkit-box-shadow: 4px 4px 4px lightskyblue;
+   -moz-box-shadow: 4px 4px 4px lightskyblue;
+
+
+   
+    
+}
+.container .row{
+    margin-top: 10%;
+}
+p{
+   font-family: 'Source Sans Pro', sans-serif;
+   font-size: 20px;
+  
 }
 h3{
     position: absolute;
     justify-content: center;
     align-items: center;
+    
 }
 .btn{
     display: flex;
