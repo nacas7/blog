@@ -37,7 +37,14 @@ export class PostService {
 
   }
 
+
+
+
   getPostByCategory(cat: string): Post[] {
+    let arrPost = this.arr
+    if (arrPost == []) {
+      arrPost = []
+    }
     return this.arr.filter(post => post.categoria === cat)
 
   }

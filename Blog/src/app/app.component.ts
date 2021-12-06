@@ -15,12 +15,4 @@ export class AppComponent {
   ngOnInit() {
     setInterval(() => this.currentDate = new Date(), 1000);
   }
-
-
-
-
-
-
-
-
 }
